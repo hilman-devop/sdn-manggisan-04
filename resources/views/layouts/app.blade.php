@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SD Negeri Manggisan 04 - Mendidik generasi unggul dengan kualitas dan integritas.">
-    <meta name="keywords" content="SDN Manggisan 04, Sekolah Dasar, Pendidikan, Jember, Tanggul">
-    <title>@yield('title') - SD Negeri Manggisan 04</title>
+    <meta name="description" content="Sekolah Dasar - Mendidik generasi unggul dengan kualitas dan integritas.">
+    <meta name="keywords" content="Sekolah Dasar, Pendidikan">
+    <title>@yield('title') - Sekolah Dasar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,8 +93,8 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
-                    <img src="{{ asset('storage/home/1750423698.jpg') }}" alt="Logo SDN Manggisan 04" class="h-10 w-10 mr-2 rounded-full shadow-md">
-                    <span class="text-2xl font-bold gradient-text shine">SD Negeri Manggisan 04</span>
+                    <img src="{{ asset('storage/home/1750423698.jpg') }}" alt="Logo Sekolah Dasar" class="h-10 w-10 mr-2 rounded-full shadow-md">
+                    <span class="text-2xl font-bold gradient-text shine">Sekolah Dasar</span>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex desktop-menu">
@@ -134,32 +134,21 @@
                 <div data-aos="fade-right">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-school text-white-400 mr-2"></i>
-                        <h3 class="text-xl font-bold" style="font-family: 'Playfair Display', serif;">SD Negeri Manggisan 04</h3>
+                        <h3 class="text-xl font-bold" style="font-family: 'Playfair Display', serif;">Sekolah Dasar</h3>
                     </div>
                     <p class="text-gray-300" style="font-family: 'Raleway', sans-serif;">Mendidik generasi unggul dengan kualitas dan integritas.</p>
                 </div>
                 <div data-aos="zoom-in">
                     <h3 class="text-xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">Kontak</h3>
-                    <a href="https://www.instagram.com/sd_negeri_manggisan_04/" target="_blank" class="text-gray-300 flex items-center gap-2 mb-2 hover:text-yellow-300" style="font-family: 'Raleway', sans-serif;">
-                        <i class="fab fa-instagram"></i> @sd_negeri_manggisan_04
-                    </a>
-                    <a href="mailto:info@sdn4manggisan.sch.id" class="text-gray-300 flex items-center gap-2 mb-2 hover:text-yellow-300" style="font-family: 'Raleway', sans-serif;">
-                        <i class="fas fa-envelope"></i> info@sdn4manggisan.sch.id
-                    </a>
-                    <a href="tel:0211234567" class="text-gray-300 flex items-center gap-2 hover:text-yellow-300" style="font-family: 'Raleway', sans-serif;">
-                        <i class="fas fa-phone-alt"></i> (021) 1234567
-                    </a>
+                    <p class="text-gray-300">Kontak sekolah disamarkan.</p>
                 </div>
                 <div data-aos="fade-left">
                     <h3 class="text-xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">Lokasi</h3>
-                    <a href="https://goo.gl/maps/2k1Qw1Qw1Qw1Qw1Q8" target="_blank" class="text-gray-300 hover:text-yellow-300" style="font-family: 'Raleway', sans-serif;">
-                        Jalan Gondang RT.001/RW.023, Sungai Tengah, Manggisan, Kec. Tanggul, Kabupaten Jember, Jawa Timur 68155
-                    </a>
-                    <p class="text-gray-300 mt-2" style="font-family: 'Raleway', sans-serif;">Jawa Timur, Tanggul</p>
+                    <p class="text-gray-300">Lokasi sekolah disamarkan.</p>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p style="font-family: 'Raleway', sans-serif;">&copy; {{ date('Y') }} fazzgod. All rights reserved.</p>
+                <p style="font-family: 'Raleway', sans-serif;">&copy; {{ date('Y') }} Hilman Arifin Ilham. All rights reserved.</p>
             </div>
         </div>
     </footer>

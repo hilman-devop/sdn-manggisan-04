@@ -13,7 +13,7 @@
                     </span>
                 </h1>
                 <p class="mt-5 max-w-2xl mx-auto text-xl text-gray-600 leading-relaxed">
-                    Dokumentasi kegiatan dan momen berharga di SD Negeri Manggisan 04
+                    Dokumentasi kegiatan dan momen berharga di Sekolah Dasar
                 </p>
                 <div class="mt-8 flex justify-center">
                     <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>

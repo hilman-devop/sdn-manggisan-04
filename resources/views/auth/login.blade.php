@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SD Negeri Manggisan 04</title>
+    <title>Login - Sekolah Dasar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
                     <i class="fas fa-school text-white text-3xl"></i>
                 </div>
                 <h2 class="text-4xl font-bold text-black-text mb-2">
-                    SD Negeri Manggisan 04
+                    Sekolah Dasar
                 </h2>
                 <p class="text-xl font-bold text-black-600 mb-8">Admin Panel</p>
             </div>
@@ -152,7 +152,7 @@
                 <!-- Footer -->
                 <div class="mt-8 text-center">
                     <p class="text-sm text-gray-600">
-                        &copy; {{ date('Y') }} SD Negeri Manggisan 04. All rights reserved.
+                        &copy; {{ date('Y') }} Sekolah Dasar. All rights reserved.
                     </p>
                 </div>
             </div>

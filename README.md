@@ -1,4 +1,4 @@
-# Website SDN Manggisan 04
+# Website Sekolah Dasar
 
 ![Laravel 12](https://img.shields.io/badge/Laravel_12-2f81f7?style=flat) ![PHP](https://img.shields.io/badge/PHP-2f81f7?style=flat) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-2f81f7?style=flat) ![Vite](https://img.shields.io/badge/Vite-2f81f7?style=flat) ![Blade](https://img.shields.io/badge/Blade-2f81f7?style=flat) ![SQLite](https://img.shields.io/badge/SQLite-2f81f7?style=flat)
 
@@ -33,6 +33,7 @@ Prasyarat dan konfigurasi dapat berbeda menurut sistem operasi. Contoh langkah u
 composer install
 cp .env.example .env
 php artisan key:generate
+# Set ADMIN_SEED_PASSWORD in .env before creating the local admin account.
 php artisan migrate --seed
 php artisan serve
 ```

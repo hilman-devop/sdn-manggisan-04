@@ -251,7 +251,7 @@
     </div>
     <footer class="py-3 mt-5">
         <div class="container text-center">
-            <p>&copy; {{ date('Y') }} SD Negeri Manggisan 04</p>
+            <p>&copy; {{ date('Y') }} Sekolah Dasar</p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

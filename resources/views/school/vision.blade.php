@@ -13,7 +13,7 @@
                 </span>
             </h1>
             <p class="mt-5 max-w-2xl mx-auto text-xl text-black-600 leading-relaxed">
-                Panduan dan arah pengembangan SD Negeri Manggisan 04
+                Panduan dan arah pengembangan Sekolah Dasar
             </p>
             <div class="mt-8 flex justify-center">
                 <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>

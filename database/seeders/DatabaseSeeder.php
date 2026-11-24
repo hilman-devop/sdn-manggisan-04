@@ -19,17 +19,17 @@ class DatabaseSeeder extends Seeder
         Teacher::truncate();
         Teacher::insert([
             [
-                'name' => 'Budi Santoso',
+                'name' => 'Guru Contoh 1',
                 'position' => 'Kepala Sekolah',
                 'photo' => null,
             ],
             [
-                'name' => 'Siti Aminah',
+                'name' => 'Guru Contoh 2',
                 'position' => 'Guru Kelas 1',
                 'photo' => null,
             ],
             [
-                'name' => 'Ahmad Fadhil',
+                'name' => 'Guru Contoh 3',
                 'position' => 'Guru Kelas 2',
                 'photo' => null,
             ],

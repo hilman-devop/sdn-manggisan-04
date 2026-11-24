@@ -9,9 +9,9 @@
         <div class="absolute inset-0">
             <a href="{{ route('login') }}">
                 @if(!empty($homeContent->image))
-                    <img src="{{ asset('storage/' . $homeContent->image) }}" class="w-full h-full object-cover" alt="SDN Manggisan 04">
+                    <img src="{{ asset('storage/' . $homeContent->image) }}" class="w-full h-full object-cover" alt="Sekolah Dasar">
                 @else
-                    <img src="{{ asset('images/sdn-manggisan04.jpg') }}" class="w-full h-full object-cover" alt="SDN Manggisan 04">
+                    <div class="w-full h-full bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900" aria-hidden="true"></div>
                 @endif
             </a>
             <!-- Overlay untuk meningkatkan keterbacaan teks -->
@@ -22,7 +22,7 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
             <div class="text-up max-w-4xl animate-fade-in-up" data-aos="fade-up">
                 <h1 class="text-6xl font-bold text-white mb-6 leading-tight" style="font-family: 'Playfair Display', serif; letter-spacing: -1px; text-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-                    {{ $homeContent->title ?? 'Selamat Datang di SD Negeri Manggisan 04' }}
+                    {{ $homeContent->title ?? 'Selamat Datang di Sekolah Dasar' }}
                 </h1>
                 <p class="text-2xl text-gray-100 mb-10 leading-relaxed" style="font-family: 'Raleway', sans-serif; font-weight: 400; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
                     {{ $homeContent->description ?? 'Mendidik generasi unggul dengan kualitas dan integritas untuk masa depan yang gemilang.' }}
@@ -283,9 +283,8 @@
                 <!-- Testimonial 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105" data-aos="flip-left" data-aos-delay="0">
                     <div class="flex items-center mb-6">
-                        <img src="https://i.pravatar.cc/60?img=1" alt="Avatar" class="w-16 h-16 rounded-full mr-4 border-4 border-blue-100">
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900" style="font-family: 'Playfair Display', serif;">Ahmad Fadhil</h4>
+                            <h4 class="text-xl font-bold text-gray-900" style="font-family: 'Playfair Display', serif;">Alumni Contoh 1</h4>
                             <p class="text-blue-600 font-medium">Alumni</p>
                         </div>
                     </div>
@@ -295,9 +294,8 @@
                 <!-- Testimonial 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105" data-aos="flip-left" data-aos-delay="100">
                     <div class="flex items-center mb-6">
-                        <img src="https://i.pravatar.cc/60?img=2" alt="Avatar" class="w-16 h-16 rounded-full mr-4 border-4 border-blue-100">
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900" style="font-family: 'Playfair Display', serif;">Siti Aminah</h4>
+                            <h4 class="text-xl font-bold text-gray-900" style="font-family: 'Playfair Display', serif;">Orang Tua Contoh</h4>
                             <p class="text-blue-600 font-medium">Orang Tua Siswa</p>
                         </div>
                     </div>
@@ -307,9 +305,8 @@
                 <!-- Testimonial 3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105" data-aos="flip-left" data-aos-delay="200">
                     <div class="flex items-center mb-6">
-                        <img src="https://ajaib.co.id/wp-content/uploads/2020/06/pengusaha-sukses.png" alt="Avatar" class="w-16 h-16 rounded-full mr-4 border-4 border-blue-100">
                         <div>
-                            <h4 class="text-xl font-bold text-gray-900" style="font-family: 'Playfair Display', serif;">Budi Santoso</h4>
+                            <h4 class="text-xl font-bold text-gray-900" style="font-family: 'Playfair Display', serif;">Alumni Contoh 2</h4>
                             <p class="text-blue-600 font-medium">Alumni</p>
                         </div>
                     </div>
@@ -331,25 +328,8 @@
                 </p>
             </div>
             
-            <div class="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl" data-aos="zoom-in">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15798.530461838613!2d113.48894225740739!3d-8.13883156114904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd68d592b42e957%3A0x1a92d576958a561d!2sSDN%20MANGGISAN%2004!5e0!3m2!1sid!2sid!4v1751981878145!5m2!1sid!2sid"
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-            <div class="mt-8 text-center" data-aos="fade-up">
-                <a href="https://goo.gl/maps/your-actual-map-link" 
-                   target="_blank"
-                   class="inline-block px-10 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl text-lg" style="font-family: 'Quicksand', sans-serif;">
-                    <i class="fas fa-map-marker-alt mr-2"></i>
-                    Buka di Google Maps
-                </a>
+            <div class="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center bg-gray-200" data-aos="zoom-in">
+                <p class="text-gray-700">Lokasi sekolah disamarkan.</p>
             </div>
         </div>
     </div>

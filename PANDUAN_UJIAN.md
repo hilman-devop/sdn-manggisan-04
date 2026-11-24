@@ -1,12 +1,12 @@
-# 🎓 Panduan Persiapan Ujian: Website Resmi SDN Manggisan 04
+# 🎓 Panduan Persiapan Ujian: Website Resmi Sekolah Dasar
 
-Dokumen ini disusun khusus sebagai bahan belajar cepat dan komprehensif bagi **Elz** untuk menghadapi ujian/sidang proyek besok. Dokumen ini merangkum semua informasi teknis, konsep arsitektur, database, alur kerja, hingga **prediksi pertanyaan dosen penguji** beserta jawaban terbaiknya.
+Dokumen ini disusun sebagai bahan belajar cepat dan komprehensif untuk menghadapi ujian/sidang proyek. Dokumen ini merangkum semua informasi teknis, konsep arsitektur, database, alur kerja, hingga **prediksi pertanyaan dosen penguji** beserta jawaban terbaiknya.
 
 ---
 
 ## 📌 1. Deskripsi Umum Proyek
-- **Nama Proyek**: Website Profil & Portal Informasi Resmi SDN Manggisan 04.
-- **Tujuan**: Sebagai media informasi publik mengenai SDN Manggisan 04 (visi-misi, sejarah, guru, fasilitas, pengumuman, galeri) sekaligus menyediakan panel kontrol (admin) bagi staf/operator sekolah untuk memperbarui data secara mandiri tanpa menyentuh kode program.
+- **Nama Proyek**: Website Profil & Portal Informasi Resmi Sekolah Dasar.
+- **Tujuan**: Sebagai media informasi publik mengenai Sekolah Dasar (visi-misi, sejarah, guru, fasilitas, pengumuman, galeri) sekaligus menyediakan panel kontrol (admin) bagi staf/operator sekolah untuk memperbarui data secara mandiri tanpa menyentuh kode program.
 - **Tipe Aplikasi**: Aplikasi Web Dinamis berbasis CMS (Content Management System) sederhana khusus sekolah.
 
 ---
@@ -112,11 +112,11 @@ Pastikan Anda hafal cara instalasi ini jika ditanya dosen tentang *deployment* p
 
 ### Skenario B: Menggunakan Laragon
 Laragon adalah tool terbaik untuk Windows karena sudah otomatis menyediakan PHP, Composer, dan terminal khusus.
-1. Salin folder proyek `SDN-Manggisan-04` ke direktori root Laragon: `C:\laragon\www\SDN-Manggisan-04`.
+1. Salin folder proyek `website-sekolah` ke direktori root Laragon: `C:\laragon\www\website-sekolah`.
 2. Buka aplikasi Laragon, lalu klik tombol **Terminal**.
 3. Di dalam terminal Laragon, ketik:
    ```bash
-   cd SDN-Manggisan-04
+   cd website-sekolah
    composer install
    npm install
    php artisan key:generate
@@ -125,13 +125,13 @@ Laragon adalah tool terbaik untuk Windows karena sudah otomatis menyediakan PHP,
    ```
 4. Jika ingin menggunakan **MySQL** bawaan Laragon:
    - Klik **Start All** di Laragon untuk menyalakan server MySQL.
-   - Buka Database Manager di Laragon, buat database baru bernama `sdn_manggisan`.
+   - Buka Database Manager di Laragon, buat database baru bernama `db_sekolah`.
    - Ubah berkas `.env` di proyek Anda:
      ```env
      DB_CONNECTION=mysql
      DB_HOST=127.0.0.1
      DB_PORT=3306
-     DB_DATABASE=sdn_manggisan
+     DB_DATABASE=db_sekolah
      DB_USERNAME=root
      DB_PASSWORD=
      ```
@@ -141,15 +141,15 @@ Laragon adalah tool terbaik untuk Windows karena sudah otomatis menyediakan PHP,
 
 ### Skenario C: Menggunakan XAMPP
 XAMPP adalah server lokal tradisional. XAMPP biasanya tidak otomatis menyertakan Composer dan NodeJS, jadi Anda harus menginstalnya secara terpisah.
-1. Salin folder proyek ke `C:\xampp\htdocs\SDN-Manggisan-04`.
+1. Salin folder proyek ke `C:\xampp\htdocs\website-sekolah`.
 2. Nyalakan **Apache** dan **MySQL** di XAMPP Control Panel.
-3. Buka browser, akses `http://localhost/phpmyadmin`, buat database baru bernama `sdn_manggisan`.
-4. Buka Command Prompt (CMD) di folder proyek tersebut (`htdocs/SDN-Manggisan-04`):
+3. Buka browser, akses `http://localhost/phpmyadmin`, buat database baru bernama `db_sekolah`.
+4. Buka Command Prompt (CMD) di folder proyek tersebut (`htdocs/website-sekolah`):
    ```bash
    composer install
    npm install
    ```
-5. Sesuaikan `.env` untuk koneksi MySQL (atur `DB_DATABASE=sdn_manggisan`, `DB_USERNAME=root`, `DB_PASSWORD=`).
+5. Sesuaikan `.env` untuk koneksi MySQL (atur `DB_DATABASE=db_sekolah`, `DB_USERNAME=root`, `DB_PASSWORD=`).
 6. Jalankan migrasi:
    ```bash
    php artisan migrate:fresh --seed
@@ -159,7 +159,7 @@ XAMPP adalah server lokal tradisional. XAMPP biasanya tidak otomatis menyertakan
    npm run dev
    ```
 8. Buka website di browser via server bawaan XAMPP:
-   `http://localhost/SDN-Manggisan-04/public`
+   `http://localhost/website-sekolah/public`
 
 ---
 
@@ -217,7 +217,7 @@ Dosen sering menguji pemahaman mahasiswa tentang cara merilis proyek ke internet
 
 ### Langkah 2: Proses Unggah di cPanel
 1. Masuk ke cPanel hosting Anda, buka **File Manager**.
-2. Masuk ke folder root akun Anda (satu tingkat di luar folder `public_html`). Unggah file `website-sekolah.zip` di sini, lalu ekstrak (misal diekstrak ke folder `/home/username/SDN-Manggisan-04`).
+2. Masuk ke folder root akun Anda (satu tingkat di luar folder `public_html`). Unggah file `website-sekolah.zip` di sini, lalu ekstrak (misal diekstrak ke folder `/home/username/website-sekolah`).
 3. Buka folder proyek tersebut di File Manager, masuk ke dalam folder `public/`. **Pindahkan/potong (cut) semua file di dalam folder `public` tersebut, lalu tempel (paste) ke dalam folder `public_html` hosting Anda.**
 
 > [!IMPORTANT]
@@ -234,14 +234,14 @@ Karena file backend dipisahkan dari folder `public_html`, kita harus memperbarui
    ```
 3. Ubah path-nya agar mengarah ke lokasi folder backend yang diletakkan di luar `public_html` tadi:
    ```php
-   require __DIR__.'/../SDN-Manggisan-04/vendor/autoload.php';
-   $app = require_once __DIR__.'/../SDN-Manggisan-04/bootstrap/app.php';
+   require __DIR__.'/../website-sekolah/vendor/autoload.php';
+   $app = require_once __DIR__.'/../website-sekolah/bootstrap/app.php';
    ```
 4. Simpan perubahan.
 
 ### Langkah 4: Konfigurasi Database & Environment di Server
 1. Buat database MySQL baru beserta user database-nya melalui menu **MySQL Databases** di cPanel.
-2. Edit file `.env` di dalam folder backend (`SDN-Manggisan-04/.env`):
+2. Edit file `.env` di dalam folder backend (`website-sekolah/.env`):
    - Ubah `APP_ENV=production`
    - Ubah `APP_DEBUG=false` (sangat penting agar pesan error sistem yang sensitif tidak tampil ke publik)
    - Ubah konfigurasi database ke MySQL yang baru dibuat di cPanel:
@@ -253,7 +253,7 @@ Karena file backend dipisahkan dari folder `public_html`, kita harus memperbarui
      DB_USERNAME=user_database_cpanel
      DB_PASSWORD=password_database_cpanel
      ```
-3. Jalankan migrasi database di hosting menggunakan fitur Terminal cPanel (jika tersedia), atau buat cron job sementara yang memicu perintah: `php /home/username/SDN-Manggisan-04/artisan migrate --seed`.
+3. Jalankan migrasi database di hosting menggunakan fitur Terminal cPanel (jika tersedia), atau buat cron job sementara yang memicu perintah: `php /home/username/website-sekolah/artisan migrate --seed`.
 
 ---
 
@@ -290,4 +290,4 @@ Gunakan jawaban ini saat berhadapan langsung dengan dosen penguji:
 
 ---
 
-🌟 **Tips Ujian**: Jawablah pertanyaan dosen dengan tenang, percaya diri, dan selalu kaitkan jawaban Anda dengan struktur kode yang telah dibuat (tunjukkan bahwa Anda paham letak file-nya). Semoga sukses ujiannya besok, Elz! Kamu pasti bisa! 💪⚡
+🌟 **Tips Ujian**: Jawablah pertanyaan dosen dengan tenang, percaya diri, dan selalu kaitkan jawaban Anda dengan struktur kode yang telah dibuat (tunjukkan bahwa Anda paham letak file-nya). Semoga sukses menghadapi ujian! Anda pasti bisa! 💪⚡

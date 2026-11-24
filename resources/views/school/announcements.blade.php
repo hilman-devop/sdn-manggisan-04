@@ -13,7 +13,7 @@
                     </span>
                 </h1>
                 <p class="mt-5 max-w-2xl mx-auto text-xl text-black-600 leading-relaxed">
-                    Informasi penting dan pengumuman terbaru dari SD Negeri Manggisan 04
+                    Informasi penting dan pengumuman terbaru dari Sekolah Dasar
                 </p>
                 <div class="mt-8 flex justify-center">
                     <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
